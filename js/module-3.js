@@ -11,10 +11,11 @@
 
 const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
 const letters = alphabet.split('');
-const firstLineKeybord = letters.slice(0,12);
-const secondLineKeybord = letters.slice(12,23);
-const thirdLineKeybord = letters.slice(23,34);
+const firstLineKeybord = letters.slice(letters.indexOf('q'), letters.indexOf(']')+1);
+const secondLineKeybord = letters.slice(letters.indexOf('a'), letters.indexOf("'")+1);
+const thirdLineKeybord = letters.slice(letters.indexOf('z'), letters.indexOf('/')+1);
 const keyboard = [firstLineKeybord, secondLineKeybord, thirdLineKeybord];
+console.log (keyboard);
 
 const hello = (keyboard[1][5]) + (keyboard[0][2]) + (keyboard[1][8]) + (keyboard[1][8]) + (keyboard[0][8]); 
 console.log(hello);
